@@ -26,7 +26,7 @@ This method:
 
    - it should be inside the repo folder, without the zip name as a dir.
 
-   - ie. the ES-DE.exe should be located at ie `Downloads\ESDE-2-XBMC\ES-DE\ES-DE.exe` 
+   - ie. the ES-DE.exe should be located at `Downloads\ESDE-2-XBMC\ES-DE\ES-DE.exe` 
 
 5. Move or copy your roms to the ROMs folder inside `Downloads\ESDE-2-XBMC\ES-DE\` setting the ROMs dir in ES-DE is untested, and i think might cause issues, but a symlink should suffice.
 
