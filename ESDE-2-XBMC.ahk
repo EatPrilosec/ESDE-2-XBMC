@@ -56,8 +56,8 @@ Media2Xmedia(MediaDir) {
 
     XmediaOutDir:= XBOutDir "\RomsMedia"
 
-    if DirExist(XmediaOutDir)
-        DirDelete(XmediaOutDir,1)
+    ;if DirExist(XmediaOutDir)
+    ;    DirDelete(XmediaOutDir,1)
 
     DirCreate(XmediaOutDir)
     MediaDirs  := ["covers", "3dboxes",   "marquees", "miximages", "titlescreens", "videos"]
