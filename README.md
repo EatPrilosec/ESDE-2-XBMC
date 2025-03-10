@@ -1,7 +1,7 @@
 # ESDE-2-XBMC
 **K**eep-**I**t-**S**imple-**S**tupid Solution to collecting rom metadata for Rocky5's XBMC-EmuStation
 
-ES-DE is a VERY capable Emulationstation frontend for desktop environments. Conveniently, it stores its metadata almost the exact same way [Rocky5's XBMC-EmuStation](https://github.com/Rocky5/XBMC-Emustation/tree/master) 
+ES-DE is a VERY capable Emulationstation frontend for desktop environments. Conveniently, it stores its metadata almost the exact same way as [Rocky5's XBMC-EmuStation](https://github.com/Rocky5/XBMC-Emustation/tree/master) 
 
 this is a simple tool I made to convert/copy scraped metadata from ES-DE to the directory structure used by Rocky5's XBMC-EmuStation, and convert the gamelist.xml files to separate synopsis files.
 
