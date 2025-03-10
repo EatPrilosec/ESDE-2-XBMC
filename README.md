@@ -23,16 +23,53 @@ This method:
 2. Download and install [AutoHotKey V2](https://www.autohotkey.com/download/)
 
 3. Download and extract [ES-DE portable from gitlab releases](https://gitlab.com/es-de/emulationstation-de/-/releases),
-  - it should be inside the repo folder, without the zip name as a dir.
-  - ie. the ES-DE.exe should be located at ie `Downloads\ESDE-2-XBMC\ES-DE\ES-DE.exe` 
 
-4. Move or copy your roms to the ROMs folder inside `Downloads\ESDE-2-XBMC\ES-DE\` setting the ROMs dir in ES-DE is untested, and i think might cause issues, but a symlink should suffice.
+   - it should be inside the repo folder, without the zip name as a dir.
 
-5. open ES-DE, use the scraper menu to scrape metadata for your games.
+   - ie. the ES-DE.exe should be located at ie `Downloads\ESDE-2-XBMC\ES-DE\ES-DE.exe` 
 
-6. look through ES-DE, make sure all your ROMs look right and edit them if necessary
+5. Move or copy your roms to the ROMs folder inside `Downloads\ESDE-2-XBMC\ES-DE\` setting the ROMs dir in ES-DE is untested, and i think might cause issues, but a symlink should suffice.
 
-7. close ES-DE, run `ESDE-2-XBMC.ahk` by double clicking it.
+6. open ES-DE, use the scraper menu to scrape metadata for your games.
+
+7. look through ES-DE, make sure all your ROMs look right and edit them if necessary
+
+8. close ES-DE, run `ESDE-2-XBMC.ahk` by double clicking it.
+
+
+## What does this tool do, specifically?
+for now, it does two very basic operations:
+
+1. Parse gamelist.xml's made by ES-DE protable, and converts them to synopsis.txt files for XBMC-Emustation to a hardcoded output directory (`Path\To\Ahk\Script\2XBox\Synopsi`),
+
+   - this does not use an xml parser and is hacky
+
+   - i will (probably) fix this at some point to be more robust, but any unaccounted for features of XML will cause issues
+
+   - must copy synopsis files to `XBMC-Emustation\emustation\synopsis\(SYSTEM NAME)\` manually
+
+3. Copy's downloaded media from ES-DE to a hardcoded output directory (`Path\To\Ahk\Script\2XBox\RomsMedia`),
+
+   - must point XBMC-Emustation to this directory
+  
+   - XBMC's `boxart` gets populated from ES-DE's `cover` folder
+ 
+   - XBMC's `boxart3d` gets populated from ES-DE's `3dboxes` folder
+  
+   - XBMC's `logo` gets populated from ES-DE's `marquees` folder
+  
+   - XBMC's `mix` gets populated from ES-DE's `miximages` folder
+  
+   - XBMC's `screenshots` gets populated from ES-DE's `titlescreens` folder
+  
+   - XBMC's `videos` gets populated from ES-DE's `videos` folder
+  
+   - that can be changed in the script via these lines:
+
+```
+MediaDirs  := ["covers", "3dboxes",   "marquees", "miximages", "titlescreens", "videos"]
+XmediaDirs := ["boxart", "boxart3d",  "logo",     "mix",       "screenshots",  "videos"]
+```
 
 
 
