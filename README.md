@@ -3,7 +3,7 @@
 
 ES-DE is a VERY capable Emulationstation frontend for desktop environments. Conveniently, it stores its metadata almost the exact same way [Rocky5's XBMC-EmuStation](https://github.com/Rocky5/XBMC-Emustation/tree/master) 
 
-this is a simple tool I made to convert/copy scraped metadata from ES-DE to the directory structure used by Rocky5's XBMC-EmuStation, and convert the gamelist.xml files for separate synopsis files.
+this is a simple tool I made to convert/copy scraped metadata from ES-DE to the directory structure used by Rocky5's XBMC-EmuStation, and convert the gamelist.xml files to separate synopsis files.
 
 This method:
 - supports your personal rom naming scheme
@@ -48,7 +48,7 @@ for now, it does two very basic operations:
 
    - must copy synopsis files to `XBMC-Emustation\emustation\synopsis\(SYSTEM NAME)\` manually
 
-3. Copy's downloaded media from ES-DE to a hardcoded output directory (`Path\To\Ahk\Script\2XBox\RomsMedia`),
+3. Copies downloaded media from ES-DE to a hardcoded output directory (`Path\To\Ahk\Script\2XBox\RomsMedia`),
 
    - must point XBMC-Emustation to this directory
   
