@@ -56,8 +56,8 @@ Media2Xmedia(MediaDir) {
 
     XmediaOutDir:= XBOutDir "\RomsMedia"
 
-    if  DirExist(XmediaOutDir)
-        DirDelete(XmediaOutDir)
+    if DirExist(XmediaOutDir)
+        DirDelete(XmediaOutDir,1)
 
     DirCreate(XmediaOutDir)
     MediaDirs  := ["covers", "3dboxes",   "marquees", "miximages", "titlescreens", "videos"]
@@ -82,12 +82,38 @@ Gamelist2Synopsi(XML) {
     ParsingGame := false
     ParsingDesc := false
 
+    Global ThisSynopsiDir := ""
+    Global ThisSynopsisFileFullPath := ""
+    Global ThisGameFullPath := ""
+    Global ThisGameName := ""
+    Global ThisGameReleaseYear := ""
+    Global ThisGameDeveloper := ""
+    Global ThisGamePublisher := ""
+    Global ThisGameGenre := ""
+    Global ThisGamePlayers := ""
+
+    Global ThisGameDeats := ""
+
+    Global ThisGameDesc := ""
+
     loop read XML {
         ThisLineRaw:=A_LoopReadLine
         ThisLine:=StrReplace(A_LoopReadLine,A_Tab)
         if (ParsingGame = false and ThisLine = "<game>") {
             ParsingGame := true
-            ResetGLVars()
+            Global ThisSynopsiDir := ""
+            Global ThisSynopsisFileFullPath := ""
+            Global ThisGameFullPath := ""
+            Global ThisGameName := ""
+            Global ThisGameReleaseYear := ""
+            Global ThisGameDeveloper := ""
+            Global ThisGamePublisher := ""
+            Global ThisGameGenre := ""
+            Global ThisGamePlayers := ""
+        
+            Global ThisGameDeats := ""
+        
+            Global ThisGameDesc := ""
             continue
         }
 
