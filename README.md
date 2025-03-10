@@ -28,7 +28,8 @@ This method:
 
    - ie. the ES-DE.exe should be located at `Downloads\ESDE-2-XBMC\ES-DE\ES-DE.exe` 
 
-5. Move or copy your roms to the ROMs folder inside `Downloads\ESDE-2-XBMC\ES-DE\` setting the ROMs dir in ES-DE is untested, and i think might cause issues, but a symlink should suffice.
+5. Move or copy your roms to the ROMs folder inside `Downloads\ESDE-2-XBMC\ES-DE\`
+   - setting the ROMs dir in ES-DE is untested, and i think might cause issues, but a symlink should suffice.
 
 6. open ES-DE, use the scraper menu to scrape metadata for your games.
 
